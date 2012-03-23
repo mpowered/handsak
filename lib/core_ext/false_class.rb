@@ -1,6 +1,6 @@
 class FalseClass
-  # Parses false to 'no'
+  # Parses false to 'No'
   def to_yes_no
-    'no'
+    'No'
   end
 end

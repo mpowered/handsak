@@ -1,6 +1,6 @@
 class TrueClass
-  # Parses true to 'yes'
+  # Parses true to 'Yes'
   def to_yes_no
-    'yes'
+    'Yes'
   end
 end
