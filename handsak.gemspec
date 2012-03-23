@@ -5,11 +5,11 @@ require "handsak/version"
 Gem::Specification.new do |s|
   s.name        = "handsak"
   s.version     = Handsak::VERSION
-  s.authors     = ["Gary Greyling"]
-  s.email       = ["greyling.gary@gmail.com"]
+  s.authors     = ["Mpowered"]
+  s.email       = ["mpowered.development@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Small ruby utils/extensions}
+  s.description = %q{Small ruby utils/extensions}
 
   s.rubyforge_project = "handsak"
 
