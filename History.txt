@@ -1,0 +1,3 @@
+0.0.2
+ * Add Numeric#to_percentage
+ * Add Numeric#round_to
