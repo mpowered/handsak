@@ -1,3 +1,6 @@
+0.0.5
+  * Nest all libs in lib/handsak/
+
 0.0.4
   * Add WithoutCallbacks
 
