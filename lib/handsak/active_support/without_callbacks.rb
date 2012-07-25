@@ -24,6 +24,10 @@ module Handsak
           # 3. method to be skipped
           #
           def self.without_callbacks(*callbacks)
+            # convert all args to symbols. AS won't restore the callbacks properly
+            # if strings are used.
+            callbacks.collect!{|callback_array| callback_array.collect!(&:to_sym)}
+
             callbacks.each do |callback|
               skip_callback *callback
             end

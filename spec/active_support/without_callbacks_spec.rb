@@ -41,5 +41,14 @@ module Handsak::ActiveSupport
       @dog.should_receive :update_kennel
       @dog.save
     end
+
+    it "parses all arguments to symbols before removing callbacks (ActiveSupport doesn't like strings in this space)" do
+      expect do
+        Dog.without_callbacks([:save, 'after', :update_kennel]) do
+          @dog.save
+        end
+        @dog.save # String args will mean an error will be thrown here if they're not parsed.
+      end.to_not raise_error(NameError)
+    end
   end
 end
