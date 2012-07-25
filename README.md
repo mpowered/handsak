@@ -54,4 +54,3 @@ Allows you to temporarily skip callbacks.
     Dog.without_callbacks([:save, :after, :update_kennel]) do
       Dog.create(:name => 'Spike') # created without updating kennel
     end
-
