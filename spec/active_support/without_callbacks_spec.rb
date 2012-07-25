@@ -1,6 +1,6 @@
 require 'active_support'
 require 'active_support/callbacks'
-require 'active_support/without_callbacks'
+require 'handsak/active_support/without_callbacks'
 
 module Handsak::ActiveSupport
 
