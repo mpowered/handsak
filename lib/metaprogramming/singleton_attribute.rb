@@ -1,8 +1,7 @@
 module Metaprogramming
   module SingletonAttribute
     private
-    # Creates a singleton accessor for an instance variable 
-    # and caches a value in that variable.
+    # Creates a singleton attribute accessor.
     # eg:
     #   class Dog
     #     include Metaprogramming::SingletonAttribute
@@ -10,7 +9,7 @@ module Metaprogramming
     #     def method_missing(method, *args)
     #       if method =~ /a pattern that recognises aggregation like methods/
     #         cache_as_singleton_attribute(method, logic_that_converts_:method_to_some_value)
-    #         return send(method) # using our new singleton method and its cache
+    #         return send(method) # using our new singleton attribute accessor
     #       else
     #         super
     #       end

@@ -21,7 +21,7 @@ module Metaprogramming
     end
 
     it "defines a singleton method to access the instance variable with the name specified" do
-      subject.methods.should include('age')
+      subject.methods.should include(:age)
       subject.age.should == 3
       Dog.new(:legs => 2).methods.should_not include('age')
     end

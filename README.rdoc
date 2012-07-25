@@ -1,2 +1,0 @@
-= Handsak
-A collection of small, oft used core extensions and utilities :)
