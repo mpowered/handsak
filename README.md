@@ -31,9 +31,27 @@ Round a number to a specific decimal place
 
 
 ### Metaprogramming
-Currently contains a single helper that allows you to easily define singelton attribute accessors.
-Included by default.
+Metaprogramming helpers. Included by default.
+#### cache_as_singleton_attribute
+A helper that allows you to easily define singelton attribute accessors.
+
+    police_dog = Dog.new
+    dog = Dog.new
+
+    police_dog.cache_as_singleton_attribute(:station_number, 12)
+    police_dog.station_number
+    >> 12
+
+    dog.station_number
+    >> NoMethodError
+
 
 ### ActiveSupport
-Currently contains a single helper that allows you to temporarily skip callbacks.
 Not included by default. 
+#### without_callbacks
+Allows you to temporarily skip callbacks.
+
+  Dog.without_callbacks([:save, :after, :update_kennel]) do
+    Dog.create(:name => 'Spike') # created without updating kennel
+  end
+
