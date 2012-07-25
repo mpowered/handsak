@@ -1,3 +1,6 @@
+0.0.4
+  * Add WithoutCallbacks
+
 0.0.3
   * Add SingletonAttribute with #cache_as_singleton_attribute
 0.0.2
