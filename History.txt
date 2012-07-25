@@ -1,3 +1,6 @@
+0.0.6
+  * without_callbacks converts all args to symbols
+
 0.0.5
   * Nest all libs in lib/handsak/
 
