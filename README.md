@@ -54,3 +54,16 @@ Allows you to temporarily skip callbacks.
     Dog.without_callbacks([:save, :after, :update_kennel]) do
       Dog.create(:name => 'Spike') # created without updating kennel
     end
+
+
+### ClosureTree
+Not included by default. 
+#### most_senior
+Returns nodes in the most senior generation
+
+    user.accounts.most_senior
+
+#### most_junior
+Returns nodes in the most junior generation
+
+    user.accounts.most_junior

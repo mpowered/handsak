@@ -1,3 +1,6 @@
+0.0.7
+  * Add the closure_tree extensions
+
 0.0.6
   * without_callbacks converts all args to symbols
 
