@@ -1,3 +1,6 @@
+0.0.9
+  * Fix closure_tree extensions for real...
+
 0.0.8
   * Fix closure_tree extensions. Ignore 'self joins' in the hierarchies tables.
 
