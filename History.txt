@@ -1,3 +1,6 @@
+0.0.10
+  * Disambiguate closure_tree ext grouping statement
+
 0.0.9
   * Fix closure_tree extensions for real...
 
