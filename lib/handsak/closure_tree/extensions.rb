@@ -10,7 +10,7 @@ module Handsak
         # Returns the most senior nodes (nodes in the oldest generation)
         def klass.most_senior
           most_senior_generation = joins(:ancestor_hierarchies)
-                                   .group(:descendant_id)
+                                   .group("#{quoted_hierarchy_table_name}.descendant_id")
                                    .maximum("#{quoted_hierarchy_table_name}.generations")
                                    .values
                                    .min
@@ -20,7 +20,7 @@ module Handsak
         # Returns the most junior nodes (nodes in the youngest generation)
         def klass.most_junior
           most_junior_generation = joins(:ancestor_hierarchies)
-                                   .group(:descendant_id)
+                                   .group("#{quoted_hierarchy_table_name}.descendant_id")
                                    .maximum("#{quoted_hierarchy_table_name}.generations")
                                    .values
                                    .max
