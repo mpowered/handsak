@@ -6,14 +6,6 @@ class Numeric
 
   # Round a number to a specific decimal place.
   def round_to(decimal_places)
-    x = self
-    decimal_places.times do
-      x = x * 10
-    end
-    x = x.round
-    decimal_places.times do
-      x = x.to_f / 10
-    end
-    x
+    to_f.round(decimal_places)
   end
 end
