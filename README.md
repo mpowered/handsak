@@ -67,3 +67,13 @@ Returns nodes in the most senior generation
 Returns nodes in the most junior generation
 
     user.accounts.most_junior
+
+
+### Services
+Not included by default. 
+#### Trading Name Normaliser
+Normalises trading names to aid in 'fuzzy' matches
+
+    TradingNameNormaliser.new('Rosenthal (PTY) l.t.d').normalised_name
+    => rosenthal
+
