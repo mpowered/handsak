@@ -69,6 +69,14 @@ Returns nodes in the most junior generation
     user.accounts.most_junior
 
 
+### ActionView
+Not included by default.
+#### Build display
+Require this lib to add a view helper that you can use to display build information.
+
+    = build_footer
+
+
 ### Services
 Not included by default. 
 #### Trading Name Normaliser
