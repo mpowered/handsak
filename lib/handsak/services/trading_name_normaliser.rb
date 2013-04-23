@@ -43,6 +43,10 @@ class TradingNameNormaliser
       proprietary
       limited
       cc
+      inc
+      incorporated
+      ing
+      ingelyf
     ).inject(name) do |name, suffix|
       name.gsub(/#{suffix}$/, '')
     end
