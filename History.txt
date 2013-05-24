@@ -1,3 +1,6 @@
+0.3.1
+  * Add specs for TradingNameNormaliser
+
 0.3.0
   * Add password validation
 
