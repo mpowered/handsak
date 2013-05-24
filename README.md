@@ -85,3 +85,13 @@ Normalises trading names to aid in 'fuzzy' matches
     TradingNameNormaliser.new('Rosenthal (PTY) l.t.d').normalised_name
     => rosenthal
 
+### Mixins
+Not included by default.
+#### Password Valdition
+Mixes into an AR user model and adds our password validation format.
+
+    class User
+      include Handsak::Mixins::PasswordValidation
+    end
+
+

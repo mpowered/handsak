@@ -1,3 +1,6 @@
+0.3.0
+  * Add password validation
+
 0.2.1
   * TradingNameNormaliser ignores 'inc' etc
 
