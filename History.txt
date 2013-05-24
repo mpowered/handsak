@@ -1,3 +1,6 @@
+0.3.2
+  * Password format isn't order sensitive anymore
+
 0.3.1
   * Add specs for TradingNameNormaliser
 
