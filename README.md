@@ -56,6 +56,12 @@ Allows you to temporarily skip callbacks.
     end
 
 
+### Routing Constraints.
+Not included by default. (require 'handsak/routing_constraints')
+#### Only ajax request
+
+    your_route_definition, :constraints => OnlyAjaxRequest.new # 404s non ajax requests
+
 ### ClosureTree
 Not included by default. 
 #### most_senior

@@ -1,3 +1,6 @@
+0.4.0
+  * Add a routing constraint
+
 0.3.3
   * Password regex doesn't use multiline anchors anymore
 
