@@ -1,3 +1,6 @@
+0.3.3
+  * Password regex doesn't use multiline anchors anymore
+
 0.3.2
   * Password format isn't order sensitive anymore
 
