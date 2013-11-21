@@ -1,0 +1,1 @@
+require "handsak/routing_constraints/only_ajax_request"
