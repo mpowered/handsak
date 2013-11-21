@@ -56,7 +56,7 @@ Allows you to temporarily skip callbacks.
     end
 
 
-### Routing Constraints.
+### Routing Constraints
 Not included by default. (require 'handsak/routing_constraints')
 #### Only ajax request
 
