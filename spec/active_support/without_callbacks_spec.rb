@@ -5,8 +5,8 @@ require 'handsak/active_support/without_callbacks'
 module Handsak::ActiveSupport
 
   class Dog
-    include ActiveSupport::Callbacks 
-    include Handsak::ActiveSupport::WithoutCallbacks 
+    include ActiveSupport::Callbacks
+    include Handsak::ActiveSupport::WithoutCallbacks
 
     define_callbacks :save
 
@@ -28,7 +28,7 @@ module Handsak::ActiveSupport
     end
 
     it "skips the callbacks specified" do
-      @dog.should_not_receive :update_kennel
+      expect(@dog).to_not receive(:update_kennel)
       Dog.without_callbacks([:save, :after, :update_kennel]) do
         @dog.save
       end
@@ -38,7 +38,7 @@ module Handsak::ActiveSupport
       Dog.without_callbacks([:save, :after, :update_kennel]) do
         @dog.save
       end
-      @dog.should_receive :update_kennel
+      expect(@dog).to receive(:update_kennel)
       @dog.save
     end
 
@@ -48,7 +48,7 @@ module Handsak::ActiveSupport
           @dog.save
         end
         @dog.save # String args will mean an error will be thrown here if they're not parsed.
-      end.to_not raise_error(NameError)
+      end.to_not raise_error
     end
   end
 end
