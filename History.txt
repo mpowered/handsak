@@ -1,3 +1,5 @@
+0.3.4
+  * Add string extension to convert bool string values to TrueClass and FalseClass
 0.3.3
   * Password regex doesn't use multiline anchors anymore
 
