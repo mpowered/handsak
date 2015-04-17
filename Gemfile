@@ -4,6 +4,6 @@ source "http://rubygems.org"
 gemspec
 
 group :development do
-  gem 'rspec'
+  gem 'rspec', '>= 2.14'
   gem 'activesupport'
 end

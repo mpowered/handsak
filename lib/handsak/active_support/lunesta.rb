@@ -11,8 +11,8 @@ module Handsak
 
     module LunestaForCallbacks
       [:save, :create, :update, :destroy, :touch].each do |type|
-        define_method("_run_#{type}_callbacks") do
-          # I do nothing, because I have eaten too many Lunesta cookies.
+        define_method("_run_#{type}_callbacks") do |&block|
+          block.call
         end
       end
     end

@@ -52,7 +52,7 @@ Not included by default.
 Allows you to destroy callbacks on an instance, leaving other instances of the same class intact. It is very threadsafe.
 
     # Create an initializer with the following:
-    require 'handsak/active_support/without_callbacks'
+    require 'handsak/active_support/lunesta'
     ActiveRecord::Base.send :include, Handsak::ActiveSupport::ReadyMyLunestaForCallbacks
 
     # Usage
