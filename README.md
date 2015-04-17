@@ -8,13 +8,13 @@ All included by default. Summary of each below.
 #### to_yes_no
 A method that returns 'yes' or 'no' on `TrueClass`, `FalseClass` & `NilClass`
 
-    true.to_yes_no 
+    true.to_yes_no
     >> 'yes'
-    
-    nil.to_yes_no 
+
+    nil.to_yes_no
     >> 'no'
-    
-    false.to_yes_no 
+
+    false.to_yes_no
     >> 'no'
 
 #### to_percentage
@@ -47,17 +47,30 @@ A helper that allows you to easily define singelton attribute accessors.
 
 
 ### ActiveSupport
-Not included by default. 
-#### without_callbacks
-Allows you to temporarily skip callbacks.
+Not included by default.
+#### Lunesta for callbacks
+Allows you to destroy callbacks on an instance, leaving other instances of the same class intact. It is very threadsafe.
 
-    Dog.without_callbacks([:save, :after, :update_kennel]) do
-      Dog.create(:name => 'Spike') # created without updating kennel
-    end
+    # Create an initializer with the following:
+    require 'handsak/active_support/without_callbacks'
+    ActiveRecord::Base.send :include, Handsak::ActiveSupport::ReadyMyLunestaForCallbacks
 
+    # Usage
+    d = Dog.find 1
+    d2 = Dog.find 2
+
+    d.lunesta_my_callbacks!
+    d.save
+    => No callbacks executed
+
+    d2.save
+    => callbacks as usual
+
+You will have to dispense with the instance once you have Lunesta'd it, since we've hosed
+it's callbacks via its Eigenclass.
 
 ### ClosureTree
-Not included by default. 
+Not included by default.
 #### most_senior
 Returns nodes in the most senior generation
 
@@ -78,7 +91,7 @@ Require this lib to add a view helper that you can use to display build informat
 
 
 ### Services
-Not included by default. 
+Not included by default.
 #### Trading Name Normaliser
 Normalises trading names to aid in 'fuzzy' matches
 
