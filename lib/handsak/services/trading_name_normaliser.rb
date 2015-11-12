@@ -2,7 +2,7 @@ class TradingNameNormaliser
   attr_reader :original
 
   def initialize(name)
-    @original = name
+    @original = name.to_s
   end
 
   def normalised_name
