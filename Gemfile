@@ -5,5 +5,5 @@ gemspec
 
 group :development do
   gem 'rspec', '>= 2.14'
-  gem 'activesupport'
+  gem 'activesupport', '~> 3.2.22.5'
 end
