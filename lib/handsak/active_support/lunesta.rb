@@ -10,10 +10,8 @@ module Handsak
     end
 
     module LunestaForCallbacks
-      [:save, :create, :update, :destroy, :touch].each do |type|
-        define_method("_run_#{type}_callbacks") do |&block|
-          block.call
-        end
+      define_method("run_callbacks") do |*args, &block|
+        block.call
       end
     end
 
