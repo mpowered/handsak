@@ -69,18 +69,6 @@ Allows you to destroy callbacks on an instance, leaving other instances of the s
 You will have to dispense with the instance once you have Lunesta'd it, since we've hosed
 it's callbacks via its Eigenclass.
 
-### ClosureTree
-Not included by default.
-#### most_senior
-Returns nodes in the most senior generation
-
-    user.accounts.most_senior
-
-#### most_junior
-Returns nodes in the most junior generation
-
-    user.accounts.most_junior
-
 
 ### ActionView
 Not included by default.

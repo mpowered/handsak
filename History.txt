@@ -1,3 +1,5 @@
+1.1.0
+  * Remove closure_tree extensions. Our apps now use native closure_tree methods instead.
 0.3.4
   * Add string extension to convert bool string values to TrueClass and FalseClass
 0.3.3
