@@ -14,7 +14,7 @@ describe String do
 
   it "should raise exception for all invalid true equivalent" do
     invalid_true.each do |invalid_case|
-      expect { invalid_case.to_bool}.to raise_error
+      expect { invalid_case.to_bool }.to raise_error(ArgumentError)
     end
   end
 
@@ -26,8 +26,7 @@ describe String do
 
   it "should raise exception for all invalid false equivalent" do
     invalid_false.each do |invalid_case|
-      expect { invalid_false.to_bool}.to raise_error
+      expect { invalid_false.to_bool }.to raise_error(NoMethodError)
     end
   end
-
 end
